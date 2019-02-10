@@ -1,0 +1,26 @@
+{
+  "name": "styled-flexboxgrid",
+  "version": "0.0.1",
+  "description": "Grid system based on flexboxgrid2 and styled-components for React",
+  "keywords": [
+    "flexboxgrid2",
+    "styled-components",
+    "react",
+    "flexbox",
+    "grid"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krystiankoper/styled-flexboxgrid.git"
+  },
+  "author": "Krystian Koper",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/krystiankoper/styled-flexboxgrid/issues"
+  },
+  "homepage": "https://github.com/krystiankoper/styled-flexboxgrid#readme"
+}
