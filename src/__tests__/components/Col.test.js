@@ -89,4 +89,22 @@ describe('Col', () => {
       expect(tree).toHaveStyleRule('max-width', percentValue, settings);
     }
   );
+  it.each(breakpointGridDimensions())(
+    'has proper style rules with %sOffset property as an integer with value equals %d',
+    (breakpoint, gridDimension) => {
+      const prop = { [`${breakpoint}Offset`]: gridDimension };
+      const tree = renderer.create(<Col {...prop} />).toJSON();
+      const percentValue = calculatePercentageGridValue(
+        gridDimension,
+        config.gridSize
+      );
+      const settings =
+        breakpoint === 'xs'
+          ? {}
+          : {
+              media: `${config.viewport[breakpoint]}`,
+            };
+      expect(tree).toHaveStyleRule('margin-left', percentValue, settings);
+    }
+  );
 });

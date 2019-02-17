@@ -54,12 +54,9 @@ const createBreakpointsStyles = props =>
 
 const createBreakpointOffsetStyles = props =>
   Object.keys(props)
-    .filter(
-      breakpoint =>
-        ~Object.keys(config.breakpointOffsetNames).indexOf(breakpoint)
-    )
+    .filter(breakpoint => ~config.breakpointOffsetNames.indexOf(breakpoint))
     .map(breakpoint => {
-      return media[config.breakpointOffsetNames[breakpoint]]`
+      return media[breakpoint.replace(/Offset/g, '')]`
         margin-left: ${calculatePercentageGridValue(
           props[breakpoint],
           config.gridSize
