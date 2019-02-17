@@ -8,12 +8,12 @@ Grid system based on flexboxgrid2 and styled-components for React
 ## Install
 
 ```
-// with npm
 $ npm install styled-flexboxgrid  --save
 
-// with yarn
-$ yarn add styled-flexboxgrid
+or
 
+$ yarn add styled-flexboxgrid
+```
 `styled-flexboxgrid` depends on these peer dependencies:
 - `prop-types@^15.5.4`
 - `react@^15.0.0 || ^16.0.0`
@@ -21,8 +21,6 @@ $ yarn add styled-flexboxgrid
 - `styled-components@2`
 
 You have to install them in your project.
-
-```
 
 Usage
 -----
@@ -47,33 +45,36 @@ class App extends React.Component {
 ```
 
 ## Container
-- `fluid` (Boolean)
+| Props | Type | Value | Style |
+|--|--|--|--|
+| `fluid` | *`Boolean`* | *true* | `padding-right: 1rem;` <br> `padding-left: 1rem;` <br> *Without fixed widths for breakpoints*
+| `fluid` | *`Boolean`* | *false* | `padding-right: 0.5rem;` <br> `padding-left: 0.5rem;` <br> *Fixed widths for breakpoints*
 
 ## Col
-- `reverse` (Boolean) - `flex-direction: column-reverse;`
-- `xs` (Boolean | Integer) - `Boolean [true] -> flex-grow: 1; flex-basis: 0; max-width: 100%;` or `Boolean [false] -> display: none;` or `Integer [1-12] -> flex-basis: ((100 / gridSize) * value)%`
-- `sm` (Boolean | Integer) - `Boolean [true] -> flex-grow: 1; flex-basis: 0; max-width: 100%;` or `Boolean [false] -> display: none;` or `Integer [1-12] -> flex-basis: ((100 / gridSize) * value)%`
-- `md` (Boolean | Integer) - `Boolean [true] -> flex-grow: 1; flex-basis: 0; max-width: 100%;` or `Boolean [false] -> display: none;` or `Integer [1-12] -> flex-basis: ((100 / gridSize) * value)%`
-- `lg` (Boolean | Integer) - `Boolean [true] -> flex-grow: 1; flex-basis: 0; max-width: 100%;` or `Boolean [false] -> display: none;` or `Integer [1-12] -> flex-basis: ((100 / gridSize) * value)%`
-- `xl` (Boolean | Integer) - `Boolean [true] -> flex-grow: 1; flex-basis: 0; max-width: 100%;` or `Boolean [false] -> display: none;` or `Integer [1-12] -> flex-basis: ((100 / gridSize) * value)%`
-- `xsOffset` (Integer) - `value [1-12] -> margin-left: ((100 / gridSize) * value)%`  
-- `smOffset` (Integer) - `value [1-12] -> margin-left: ((100 / gridSize) * value)%`  
-- `mdOffset` (Integer) - `value [1-12] -> margin-left: ((100 / gridSize) * value)%`  
-- `lgOffset` (Integer) - `value [1-12] -> margin-left: ((100 / gridSize) * value)%`  
-- `xlOffset` (Integer) - `value [1-12] -> margin-left: ((100 / gridSize) * value)%`  
+| Props | Type | Value | Style |
+|--|--|--|--|
+| `reverse` | *`Boolean`* | *true* | `flex-direction: column-reverse;`
+| `reverse` | *`Boolean`* | *false* | `flex-direction: column`;
+| `xs` `sm` `md` `lg` `xl` | *`Boolean`* | *true* | `flex-grow: 1;` <br> `flex-basis: 0;` <br> `max-width: 100%;`
+| `xs` `sm` `md` `lg` `xl` | *`Boolean`* | *false* | `display: none;`
+| `xs` `sm` `md` `lg` `xl` | *`Integer`* | *1-12* | `flex-basis: ((100 / 12) * value)%` <br> `max-width: ((100 / 12) * value)%`
+| `xsOffset` <br> `smOffset` <br> `mdOffset` <br> `lgOffset` <br> `xlOffset` | *`Integer`* | *1-12* | `margin-left: ((100 / 12) * value)%` 
 
 ## Row
-- `reverse` (Boolean) - `flex-direction: row-reverse;`
-- `start` (xs|sm|md|lg|xl) - `justify-content: flex-start;`
-- `center` (xs|sm|md|lg|xl) - `justify-content: center;`
-- `end` (xs|sm|md|lg|xl) - `justify-content: flex-end;`
-- `top` (xs|sm|md|lg|xl) - `align-items: flex-start;`
-- `middle` (xs|sm|md|lg|xl) - `align-items: center;`
-- `bottom` (xs|sm|md|lg|xl) - `align-items: flex-end;`
-- `around` (xs|sm|md|lg|xl) - `justify-content: space-around;`
-- `between` (xs|sm|md|lg|xl) - `justify-content: space-between;`
-- `first` (xs|sm|md|lg|xl) - `order: -1;`
-- `last` (xs|sm|md|lg|xl) - `order: 1;`
+| Props | Type | Value | Style |
+|--|--|--|--|
+| `reverse` | *`Boolean`* | *true* | `flex-direction: row-reverse;`
+| `reverse` | *`Boolean`* | *false* | `flex-direction: row`;
+| `start` | *`One of type`* | `xs` <br> `sm` <br> `md` <br> `lg` <br> `xl` | `justify-content: flex-start;`
+| `center` | *`One of type`* | `xs` <br> `sm` <br> `md` <br> `lg` <br> `xl` | `justify-content: center;`
+| `end` | *`One of type`* | `xs` <br> `sm` <br> `md` <br> `lg` <br> `xl` | `justify-content: flex-end;`
+| `top` | *`One of type`* | `xs` <br> `sm` <br> `md` <br> `lg` <br> `xl` | `align-items: flex-start;`
+| `middle` | *`One of type`* | `xs` <br> `sm` <br> `md` <br> `lg` <br> `xl` | `align-items: center;`
+| `bottom` | *`One of type`* | `xs` <br> `sm` <br> `md` <br> `lg` <br> `xl` | `align-items: flex-end;`
+| `around` | *`One of type`* | `xs` <br> `sm` <br> `md` <br> `lg` <br> `xl` | `justify-content: space-around;`
+| `between` | *`One of type`* | `xs` <br> `sm` <br> `md` <br> `lg` <br> `xl` | `justify-content: space-between;`
+| `first` | *`One of type`* | `xs` <br> `sm` <br> `md` <br> `lg` <br> `xl` | `order: -1;`
+| `last` | *`One of type`* | `xs` <br> `sm` <br> `md` <br> `lg` <br> `xl` | `order: 1;`
 
 ## License
 
