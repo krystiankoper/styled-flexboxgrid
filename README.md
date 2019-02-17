@@ -13,3 +13,7 @@ $ npm install styled-flexboxgrid  --save
 // with yarn
 $ yarn add styled-flexboxgrid
 ```
+
+## License
+
+MIT © [krystiankoper](https://github.com/krystiankoper)
