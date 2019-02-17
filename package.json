@@ -1,6 +1,6 @@
 {
   "name": "@krystiankoper/styled-flexboxgrid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Grid system based on flexboxgrid2 and styled-components for React",
   "keywords": [
     "flexboxgrid2",
