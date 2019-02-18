@@ -8,11 +8,11 @@ Grid system based on flexboxgrid2 and styled-components for React
 ## Install
 
 ```
-$ npm install styled-flexboxgrid  --save
+$ npm install @krystiankoper/styled-flexboxgrid --save
 
 or
 
-$ yarn add styled-flexboxgrid
+$ yarn add @krystiankoper/styled-flexboxgrid
 ```
 `styled-flexboxgrid` depends on these peer dependencies:
 - `prop-types@^15.5.4`
